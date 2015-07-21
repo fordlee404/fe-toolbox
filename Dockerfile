@@ -6,7 +6,7 @@ ENV REFRESHED_AT 2015-07-18
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 RUN apt-get -yqq update
-RUN apt-get -yqq install curl
+RUN apt-get -yqq install curl python
 
 ENV NVM_DIR $HOME/.nvm
 ENV NODE_VERSION 0.10.22
