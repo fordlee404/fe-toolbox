@@ -46,3 +46,8 @@ RUN npm install -g bower
 RUN npm install -g gulp
 RUN npm install -g webpack
 RUN npm install -g webpack-dev-server
+
+# Setup dev environment
+RUN mkdir /home/dev/share
+VOLUME /home/dev/share
+WORKDIR /home/dev/share
