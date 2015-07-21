@@ -17,3 +17,7 @@ A docker image for FE toolbox
 ## WORKDIR
 
 `/home/dev/share`
+
+## Example
+
+`$ docker run -it --name grunt -v ~/project:/home/dev/share fordlee404/fe-toolbox grunt`
