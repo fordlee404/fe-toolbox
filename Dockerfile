@@ -45,3 +45,4 @@ RUN npm install -g grunt-cli
 RUN npm install -g bower
 RUN npm install -g gulp
 RUN npm install -g webpack
+RUN npm install -g webpack-dev-server
