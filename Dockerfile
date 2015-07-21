@@ -5,11 +5,15 @@ ENV REFRESHED_AT 2015-07-18
 # Replace shell with bash so we can source files
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
+ENV DEBIAN_FRONTEND noninteractive
+
 RUN apt-get -yqq update
-RUN apt-get -yqq install curl 
+RUN apt-get -yqq install curl
 RUN apt-get -yqq install python
 RUN apt-get -yqq install make
 RUN apt-get -yqq install gcc
+RUN apt-get -yqq install build-essential
+RUN apt-get -yqq install g++
 
 # Setup home environment
 RUN useradd dev
