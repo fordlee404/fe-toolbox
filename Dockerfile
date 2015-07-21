@@ -6,7 +6,22 @@ ENV REFRESHED_AT 2015-07-18
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 RUN apt-get -yqq update
-RUN apt-get -yqq install curl python
+RUN apt-get -yqq install curl 
+RUN apt-get -yqq install python
+RUN apt-get -yqq install make
+RUN apt-get -yqq install gcc
+
+# Setup home environment
+RUN useradd dev
+RUN mkdir /home/dev && chown -R dev: /home/dev
+RUN mkdir -p /home/dev/bin /home/dev/lib /home/dev/include
+ENV PATH /home/dev/bin:$PATH
+ENV PKG_CONFIG_PATH /home/dev/lib/pkgconfig
+ENV LD_LIBRARY_PATH /home/dev/lib
+
+WORKDIR /home/dev
+ENV HOME /home/dev
+USER dev
 
 ENV NVM_DIR $HOME/.nvm
 ENV NODE_VERSION 0.10.22
@@ -21,4 +36,8 @@ RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh
 ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
 ENV PATH      $NVM_DIR/v$NODE_VERSION/bin:$PATH
 
-RUN npm install -g yo grunt-cli bower gulp webpack
+RUN npm install -g yo
+RUN npm install -g grunt-cli
+RUN npm install -g bower
+RUN npm install -g gulp
+RUN npm install -g webpack
