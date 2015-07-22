@@ -40,7 +40,6 @@ RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh
 ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
 ENV PATH      $NVM_DIR/v$NODE_VERSION/bin:$PATH
 
-RUN npm install -g npm
 RUN npm install -g yo
 RUN npm install -g grunt-cli
 RUN npm install -g bower
