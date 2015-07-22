@@ -28,7 +28,7 @@ ENV HOME /home/dev
 USER dev
 
 ENV NVM_DIR $HOME/.nvm
-ENV NODE_VERSION 0.10.22
+ENV NODE_VERSION 0.10.32
 
 # Install nvm with node and npm
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash \
@@ -40,6 +40,7 @@ RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh
 ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
 ENV PATH      $NVM_DIR/v$NODE_VERSION/bin:$PATH
 
+RUN npm install -g npm
 RUN npm install -g yo
 RUN npm install -g grunt-cli
 RUN npm install -g bower
