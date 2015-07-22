@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 MAINTAINER Ford Lee <fordlee404@gmail.com>
-ENV REFRESHED_AT 2015-07-21
+ENV REFRESHED_AT 2015-07-22
 
 # Replace shell with bash so we can source files
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
