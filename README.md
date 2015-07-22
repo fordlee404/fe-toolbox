@@ -3,6 +3,8 @@ A docker image for FE toolbox
 
 ## Include tools
 
+* [NodeJS](http://nodejs.org) `version: 0.10.38`
+* [npm](https://www.npmjs.com) `version: 2.10.0`
 * [Yeoman](http://yeoman.io)
 * [Bower](http://bower.io)
 * [Grunt](http://gruntjs.com)
