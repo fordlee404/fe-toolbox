@@ -17,7 +17,7 @@ RUN apt-get -yqq install g++
 
 # Setup home environment
 RUN useradd dev
-RUN mkdir /home/dev && chown -R dev: /home/dev
+RUN mkdir /home/dev && chown -R dev:dev /home/dev
 RUN mkdir -p /home/dev/bin /home/dev/lib /home/dev/include
 ENV PATH /home/dev/bin:$PATH
 ENV PKG_CONFIG_PATH /home/dev/lib/pkgconfig
@@ -28,7 +28,7 @@ ENV HOME /home/dev
 USER dev
 
 ENV NVM_DIR $HOME/.nvm
-ENV NODE_VERSION 0.10.32
+ENV NODE_VERSION 0.10.38
 
 # Install nvm with node and npm
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh | bash \
@@ -40,6 +40,7 @@ RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.4/install.sh
 ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
 ENV PATH      $NVM_DIR/v$NODE_VERSION/bin:$PATH
 
+RUN npm install -g npm@2.10.0
 RUN npm install -g yo
 RUN npm install -g grunt-cli
 RUN npm install -g bower
