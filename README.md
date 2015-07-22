@@ -10,7 +10,7 @@ A docker image for FE toolbox
 * [Grunt](http://gruntjs.com)
 * [Gulp](http://gulpjs.com)
 * [Webpack](http://webpack.github.io)
-* [webpack-dev-server]
+* [webpack-dev-server](http://webpack.github.io/docs/webpack-dev-server.html)
 
 ## VOLUME
 
