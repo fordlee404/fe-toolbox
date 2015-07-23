@@ -1,9 +1,14 @@
-FROM node:0.10.40
+FROM node:0.10.40-slim
 MAINTAINER Ford Lee <fordlee404@gmail.com>
 ENV REFRESHED_AT 2015-07-22
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV USER root
+
+RUN apt-get -yqq update
+RUN apt-get -yqq install make
+RUN apt-get -yqq install python
+RUN apt-get -yqq install g++
 
 RUN npm install -g yo
 RUN npm install -g grunt-cli
