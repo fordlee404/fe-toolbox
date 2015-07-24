@@ -1,6 +1,5 @@
 FROM node:0.10.40-slim
 MAINTAINER Ford Lee <fordlee404@gmail.com>
-ENV REFRESHED_AT 2015-07-22
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV USER root
