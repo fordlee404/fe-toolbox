@@ -9,6 +9,10 @@ RUN apt-get -yqq update
 RUN apt-get -yqq install make
 RUN apt-get -yqq install python
 RUN apt-get -yqq install g++
+RUN apt-get -yqq install ruby-full
+
+RUN gem update --system
+RUN gem install compass
 
 RUN npm install -g yo
 RUN npm install -g grunt-cli
