@@ -29,3 +29,5 @@ RUN npm install -g webpack-dev-server
 RUN mkdir /home/root/share
 VOLUME /home/root/share
 WORKDIR /home/root/share
+
+CMD ["/bin/bash"]
