@@ -15,12 +15,12 @@ A docker image for FE toolbox
 
 ## VOLUME
 
-`/home/dev/share`
+`/home/root/share`
 
 ## WORKDIR
 
-`/home/dev/share`
+`/home/root/share`
 
 ## Example
 
-`$ docker run -it --name grunt -v ~/project:/home/dev/share fordlee404/fe-toolbox grunt`
+`$ docker run -it --name grunt -v ~/project:/home/root/share fordlee404/fe-toolbox grunt`
