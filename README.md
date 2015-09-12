@@ -1,5 +1,5 @@
 # fe-toolbox
-A docker image for FE toolbox
+A docker image for front-end toolbox
 
 ## Include tools
 
@@ -15,12 +15,12 @@ A docker image for FE toolbox
 
 ## VOLUME
 
-`/home/root/share`
+`/home/root/project`
 
 ## WORKDIR
 
-`/home/root/share`
+`/home/root/project`
 
 ## Example
 
-`$ docker run -it --name grunt -v ~/project:/home/root/share fordlee404/fe-toolbox grunt`
+`$ docker run -it --name grunt -v ~/project:/home/root/project fordlee404/fe-toolbox grunt`
