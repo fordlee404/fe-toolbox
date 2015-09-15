@@ -6,14 +6,23 @@ RUN mkdir /home/root && chmod -R 777 /home/root
 ENV HOME /home/root
 WORKDIR /home/root
 
+# Add .bashrc file
+RUN touch .bashrc
+
+# Install packages
 RUN apt-get update && apt-get install -y \
+    apt-utils \
+    curl \
+    wget \
     make \
-    python \
     g++ \
+    python \
     ruby-full
 
-RUN gem update --system
 RUN gem install compass
+
+# Install nvm
+RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
 
 RUN npm install -g yo
 RUN npm install -g grunt-cli
