@@ -1,4 +1,4 @@
-FROM node:4.0.0
+FROM node:0.12.7
 MAINTAINER Ford Lee <fordlee404@gmail.com>
 
 # Setup home environment
